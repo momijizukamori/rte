@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@mdi/js": "^5.9.55",
+    "balloon-css": "^1.2.0",
+    "dragula": "^3.7.3",
+    "prosemirror": "^0.11.1",
+    "prosemirror-commands": "^1.1.5",
+    "prosemirror-example-setup": "^1.1.2",
+    "prosemirror-gapcursor": "^1.1.5",
+    "prosemirror-history": "^1.1.3",
+    "prosemirror-hyperlink": "^0.0.6",
+    "prosemirror-image-plugin": "^1.1.0",
+    "prosemirror-keymap": "^1.1.4",
+    "prosemirror-model": "^1.13.1",
+    "prosemirror-schema-basic": "^1.1.2",
+    "prosemirror-schema-list": "^1.1.4",
+    "prosemirror-state": "^1.3.4",
+    "prosemirror-tables": "^1.1.1",
+    "prosemirror-transform": "^1.2.9",
+    "prosemirror-view": "^1.17.2"
+  }
+}

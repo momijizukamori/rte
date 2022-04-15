@@ -1,0 +1,45 @@
+<!doctype html>
+<meta charset=utf8>
+<link rel=stylesheet href="editor.css">
+<link rel=stylesheet href="rte.css">
+<link rel=stylesheet href='./css/all.css'>
+
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="tables.css">
+<link rel="stylesheet" href="gapcursor.css">
+<link rel=stylesheet href="node_modules/prosemirror-gapcursor/style/gapcursor.css">
+
+<form id="testform">
+<select id="editor" select="html_casual1" name="editor" class="select">
+<option value="html_casual1" >Casual HTML</option>
+<option value="markdown0">Markdown</option>
+<option value="html_raw0">Raw HTML</option>
+<option value="rte0" selected="selected">Rich Text Editor</option>
+</select>
+<input type="file" id="imageselector" />
+<div id=rte style="margin-bottom: 23px"></div>
+
+<textarea name="event">
+  <h3>Hello ProseMirror</h3>
+
+  <img src="https://placekitten.com/200/300" width='10em'>
+
+This is editable text. You can focus it and start typing.
+
+  <blockquote>This is centered text!</blockquote>
+
+  To apply styling, you can select a piece of text and manipulate its styling from the menu. The basic schema supports <em>emphasis</em>, <strong>strong text</strong>, <a href="http://marijnhaverbeke.nl/blog">links</a>, <code>code font</code>, and <img src="/img/smiley.png"> images.
+
+ Block-level structure can be manipulated with key bindings (try ctrl-shift-2 <span style="font-size:larger">to create a level 2 heading</span>, or enter in an empty textblock to exit the parent block), or through the menu.
+
+  <user name="momijizukamori">
+
+  <table>
+  <tr><td>cell 1</td><td>cell 2</td></tr>
+  </table>
+This is some justified text. I'm baby direct trade meditation asymmetrical bicycle rights wolf, ennui stumptown banh mi literally fixie art party. Ennui neutra raw denim kale chips chambray, portland lumbersexual keffiyeh swag waistcoat narwhal. Hella gentrify hoodie cred readymade street art snackwave occupy heirloom narwhal skateboard food truck ennui vegan try-hard. Farm-to-table portland tote bag, tbh lo-fi man bun polaroid shoreditch selfies salvia. Typewriter fingerstache biodiesel XOXO kinfolk vexillologist church-key aesthetic thundercats cronut brunch occupy godard blog.
+
+Try using the “list” <cut text="hello!">item in the menu to wrap this paragraph in</cut> a numbered list.
+
+<blockquote>Baaaaaah</blockquote></textarea>
+</form>

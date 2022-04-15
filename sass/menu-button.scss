@@ -1,0 +1,193 @@
+@import "~balloon-css/src/balloon";
+//@import "../dist/fa/scss/fontawesome.scss";
+
+$focus-border-color: #005a9c !default;
+$focus-bg-color: rgb(226, 239, 255) !default;
+
+$button-border-color: #ffffff !default; 
+$button-bg-color: #ffffff !default; 
+$button-text-color: #000 !default;
+$button-text-size: 1.5rem;
+
+$button-active-border-color: #555 !default;
+$button-active-bg-color: #f4f4f4 !default;
+$button-active-text-color: $button-text-color !default;
+
+$button-disabled-border-color: $button-border-color !default;
+$button-disabled-bg-color: #ddd !default;
+$button-disabled-text-color: #889 !default;
+
+:root {
+    // --focus-border-color: $focus-color; 
+    // --focus-bg-color: $focus-bg-color;
+    // --button-border-color: $button-border-color;
+    // --button-bg-color: $button-bg-color;
+    // --button-text-color: $button-text-color;
+    // --button-text-size: $button-text-size;
+
+    // --button-active-border-color: $button-active-border-color;
+    // --button-active-bg-color: $button-active-bg-color;
+    // --button-active-text-color: $button-active-text-color;
+
+    // --button-disabled-border-color: $button-disabled-border-color;
+    // --button-disabled-bg-color: $button-disabled-bg-color;
+    // --button-disabled-text-color: $button-disabled-text-color;
+
+    --focus-border-color: #005a9c; 
+    --focus-bg-color: rgb(226, 239, 255);
+    --button-border-color: #fff;
+    --button-bg-color: #fff;
+    --button-text-color: #000;
+    --button-text-size: 1rem;
+
+    --button-active-border-color: #555;
+    --button-active-bg-color: #f4f4f4;
+    --button-active-text-color: #000;
+
+    --button-disabled-border-color: $button-disabled-border-color;
+    --button-disabled-bg-color: #eee;
+    --button-disabled-text-color:#889;
+}
+
+[role='toolbar'].st-menubar {
+
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 6px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: auto;
+    background-color: #ececea;
+    font-family: sans-serif;
+
+    /* base styling for toolbar items */
+    button, [role="radio"], .spinbutton, a, .input {
+
+        border: 1px solid var(--button-border-color);
+        outline: none;
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 5px;
+        text-align: center;
+        background: var(--button-bg-color);
+        color: var(--button-text-color);
+        font-size: var(--button-text-size);
+        line-height: 1rem;
+        margin-right: 0.25em;
+
+        &:focus {
+            border-width: 2px;
+            border-color: var(--focus-border-color);
+            background: var(--focus-bg-color);
+            padding: 5px 11px;
+        }
+        
+        &:hover {
+            border-color: var(--focus-border-color);
+            background: var(--focus-bg-color);
+        }
+        
+    }
+    
+    .focus {
+        border-color: var(--focus-border-color);
+        border-width: 3px;
+        padding: 5px;
+    }
+
+    /* active/selected buttons */
+    button[aria-pressed="true"],
+    [role="radio"][aria-checked="true"] {
+        border-color: var(--button-active-border-color);
+        font-weight: bold;
+        background-color: var(--button-active-bg-color);
+    }
+    
+    /* disabled buttons */
+    button[aria-disabled="true"] {
+        color: var(--button-disabled-text-color);
+        background: var(--button-disabled-bg-color);
+        cursor: not-allowed;
+
+        &:focus {
+            border-color: var(--focus-border-color);
+        }
+
+        &:hover {
+            background: var(--button-disabled-bg-color);
+        }
+    }
+
+    /* Styles for button groups */
+    .st-button-group {
+    padding: 0.25em;
+    display: inline-block;
+
+        &:not(:first-child) {
+            margin-left: 0.75em;
+        }
+    }    
+
+    /* Styles relating to dropdown menu items */
+    .menu-popup {
+        position: relative;
+        display: inline-block;
+
+        span.st-button-arrow::after {
+            content: "▾";
+            margin-left: 1rem;
+        }
+
+        [role="menu"] {
+            padding: 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+            display: none;
+            position: absolute;
+            margin: 0;
+            z-index: 1;
+
+            .focus {
+                border-color: var(--focus-border-color);
+            }
+
+            li {
+                padding: 0;
+                margin: 0;
+                display: block;
+                text-align: left;
+                list-style: none;
+            }
+
+            [role="menuitemradio"], [role="menuitem"] {
+                padding: 1px 5px;
+                outline: 0;
+                border: none;
+                border-radius: 0;
+                white-space: nowrap;
+
+                &:before {
+                    content: ' ';
+                    display: inline-block;
+                    width: 0.75rem;
+                    }
+
+                &[aria-checked="true"]:before {
+                    content: "▸";
+                }
+
+                &:focus, &:hover {
+                    background: var(--focus-bg-color);
+                    border-top: 1px solid var(--focus-border-color);
+                    border-bottom: 1px solid var(--focus-border-color);
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+}
